@@ -1,10 +1,12 @@
          body{
                 font-family:sans-serif;
+                margin:0px;
+                background-color:#fdfbf9;
             }
             
+                
             .container{
                 margin: 20px; 
-                background-color: beige;
                 padding: 20px;
                 text-align:center;
                
@@ -45,3 +47,5 @@
                 background-color: #4CAF50;
                 color: white;
 }    
+
+        
