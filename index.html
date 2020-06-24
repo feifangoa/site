@@ -22,7 +22,7 @@
         <a href="contact.html">Contact</a>
         <a href="about.html">About</a>
         <button class="inputbox" 
-                onclick="myfunction()"><i class="fa fa-search"></i></button>
+                onclick="myfunction()"><i class="fa fa-bath"></i></button>
         <input class="inputbox"id="myinput">
        
 </div>
@@ -45,8 +45,21 @@
     <script>
         
       function myfunction(){
+          
+          data = [{pokemon: "bulbasur", type: "grass"}, {pokemon: "pikachu", type: "electric"}, 
+                  {pokemon: "charmander", type: "fire"}];
+          
           myinput = document.getElementById("myinput");
-          alert(myinput.value);
+          
+          for (i=0; i<3; i++){
+              if (data[i]['pokemon'] == myinput.value.toLowerCase()) {
+                  alert (data[i] ['type']);
+                  break;
+              }
+                  
+              
+          }              
+          
           myinput.value = "";
       }
     
