@@ -30,7 +30,7 @@ body {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 18px 16px;
     text-decoration: none;
     font-size: 17px;
 }
@@ -39,12 +39,15 @@ body {
 .topnav a:hover {
     background-color: #ddd;
     color: black;
+    padding:18px;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #bcf4fb;
+    color: #333;
+    padding:18px;
+    
 }
 
 .card {
@@ -76,7 +79,19 @@ img {
 }
 
 .inputbox{
-    margin-top:20px;
-    margin-bottom:20px;
+    margin-top:10px;
+    margin-bottom:10px;
     float:right;
+    padding: 6px 22px;
+    border-radius:12px;
+}
+.mybutton{
+    background:#bcf4fb;
+    float: right;
+    margin:auto;
+    padding: 6 22px;
+    color: #333;
+    margin-top:10.5px;
+    margin-bottom:10px;
+    border-radius:12px;
 }
