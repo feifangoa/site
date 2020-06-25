@@ -4,13 +4,15 @@
         <title>Home</title>
         <link rel="stylesheet" href="mystyles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="pokedex.json"></script>
     </head>
+    
     <style>
         footer {
             text-align: center;
             padding: 5px;
             margin:0px;
-            background-color:#4CAF50;
+            background-color:#bcf4fb;
             color:white;
 }
     </style>
@@ -21,15 +23,16 @@
         <a class="active" href="index.html">Home</a>
         <a href="contact.html">Contact</a>
         <a href="about.html">About</a>
-        <button class="inputbox" 
+        <button class="mybutton" 
                 onclick="myfunction()"><i class="fa fa-handshake-o"></i></button>
         <input class="inputbox"id="myinput">
-       
-</div>
+        </div>
         
-       <div class="container">
+        <div class="container">
             <p><img src="welcome.png"style="width: 300px;"></p>
             <h1>HOME</h1>
+            <div id="info"></div>
+           
             <a href="https://www.flickr.com/photos/156137358@N03/albums" target="_blank">Flickr - phoenix's life as a photographer</a><br>
             <img src="home.gif"style="width: 660px;padding: 20px">
         </div>
@@ -39,23 +42,25 @@
     
     <footer>
         <p><a href="mailto:phoenixgao612@gmail.com">By Phoenix</a></p>
-        
     </footer>
        
+    
     <script>
         
-      function myfunction(){
+      function myfunction() {
           
-          data = [{pokemon: "bulbasur", type: "grass"}, {pokemon: "pikachu", type: "electric"}, 
-                  {pokemon: "charmander", type: "fire"}];
+          //data = [{pokemon: "bulbasur", type: "grass"}, {pokemon: "pikachu", type: "electric"}, {pokemon: "charmander", type: "fire"}];
           
           myinput = document.getElementById("myinput");
+          mydiv = document.getElementById("info");
           
-          for (i=0; i<3; i++){
-              if (data[i]['pokemon'] == myinput.value.toLowerCase()) {
-                  alert (data[i] ['type']);
+          for (i=0; i<data.length; i++){
+              if (data[i]['name'] ['english'].toLowerCase() == myinput.value.toLowerCase()) {
+                  //alert (data[i]['type'][0]);
+                  
+                  mydiv.innerHTML = "<h1>" + data [i]['name']['english'] + "</h1><h3>" + data [i]['type'][0] + "</h3>"   
                   break;
-              }
+               }
                   
               
           }              
@@ -64,4 +69,6 @@
       }
     
     </script>
+    
+    
 </html>
