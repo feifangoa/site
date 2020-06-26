@@ -3,6 +3,8 @@
     <head>
         <title>Home</title>
         <link rel="stylesheet" href="mystyles.css">
+        
+        
     </head>
     <style>
         footer {
@@ -23,6 +25,10 @@
         <a href="index.html">Home</a>
         <a class="active" href="contact.html">Contact</a>
         <a href="about.html">About</a>
+        <div class=div1>
+        <div id="div1" class="fa"></div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        </div>
         </div>
         
         <div class="container">
@@ -38,16 +44,62 @@
             <p>Ridley College 20' & Rhode Island School of Design 24'</p>
             </div>
                  
-        </div>
+            
+        </div><br>
+           
+            <div class="chat-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+             <h1>Chat?</h1>
+
+            <label for="msg"><b>Message</b></label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+          
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+                
+                <form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value=""><br><br>
+        <input type="submit" value="Submit">
+        </form>
+            </div>
             
         </div>
-       
+
+        
+    <hr class="dotted">
+        
      <footer>
         <p><a href="mailto:phoenixgao612@gmail.com">By Phoenix</a></p>
         
     </footer>
        
+<script>
+            function openfolder() {
+            var a;
+            a = document.getElementById("div1");
+            a.innerHTML = "&#xf114;";
+            setTimeout(function () {
+            a.innerHTML = "&#xf115;";
+    }, 1000);
+}
+            openfolder();
+            setInterval(openfolder, 2000);
+</script>
         
+        
+<script>
+            function openForm() {
+            document.getElementById("myForm").style.display = "block";
+}
+
+            function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+}
+</script>
         
     </body>
        
