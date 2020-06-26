@@ -249,3 +249,10 @@ hr.rounded {
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
+.property{
+    background-color: #f2f2f2;
+    color:black;
+    border-radius: 16px;
+    margin-left:260px;
+    margin-right:260px;
+}
