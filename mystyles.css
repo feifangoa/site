@@ -136,12 +136,12 @@ img {
 }
 
 .datebutton{
-    background:#bcf4fb;
-    color: #333;
-    padding: 6 22px;
-    border-radius:12px;
+    margin-left:540px;   
 }
 
+.datebutton2{
+    text-align:center;
+}
 /* Dashed border */
 hr.dashed {
   border-top: 3px dashed #bbb;
