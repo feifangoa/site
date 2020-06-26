@@ -26,7 +26,7 @@
         
         <button class="mybutton" 
                 onclick="myfunction()"><i class="fa fa-handshake-o"></i></button>
-        <input class="inputbox"id="myinput">
+        <input class="inputbox"id="myinput" placeholder="enter a pokemon...">
         </div>
         
         <div id="mySidenav" class="sidenav">
@@ -39,15 +39,16 @@
         
         <div class="container">
             <p><img src="welcome.png"style="width: 300px;"></p>
-            <h1>HOME</h1>
-            <div id="info"></div>
+            <h1>Welcome to the world of Pokemon!</h1>
+            <p>Enter a Pokemon to retrieve individual Pokemon properties!</p>
+            <div class="property" id="info"></div>
             
         <button type="button" class="datebutton"
             onclick="document.getElementById('demo').innerHTML = Date()">
             Click me to display Date and Time!</button>
             <p id="demo"></p>
             
-            <a href="https://www.flickr.com/photos/156137358@N03/albums" target="_blank">Flickr - phoenix's life as a photographer</a><br>
+            <a href="https://www.pokemon.com/us/" target="_blank">Continue exploring more about pokemon?</a><br>
             <img src="home.gif"style="width: 660px;padding: 20px">
         </div>
         
@@ -63,6 +64,23 @@
        
     
     <script>
+        
+        
+        // Get the input field
+        var input = document.getElementById("myinput");
+
+        // Execute a function when the user releases a key on the keyboard
+        input.addEventListener("keyup", function(event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        //document.getElementById("myBtn").click();
+        myfunction();
+        }
+        });
+        
         
       function myfunction() {
           
